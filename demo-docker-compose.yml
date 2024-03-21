@@ -1,1 +1,14 @@
-version:"3.8"
+version:'3.8'
+services:
+  springapp:
+    image: pravalika52/spring-app:1
+    ports:
+    -8080:8080
+    network:
+    -springbridgenetwork
+    environment:
+    - MONGO_DB_HOSTNAME=mongo
+    - MONGO_DB_USERNAME=pravali
+    - MONGO_DB_PASSWORD=pravali
+  volumes:
+  networks:
